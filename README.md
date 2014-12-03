@@ -3,8 +3,8 @@
 *Script(s)/bots that do something with the [Human Genome Project's](http://www.genome.gov/) nucleotide sequences*
 
 I've downloaded Genome Reference Consortium Human Build 38 patch release 1 from the [National Center for 
-Biotechnical Information](http://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.27/) (thanks to
-[@vogon](https://twitter.com/vogon) for this!). I was using the one from [Project 
+Biotechnical Information](http://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.27/) (thanks 
+[@vogon](https://twitter.com/vogon) for pointing me to this!). I was using the one from [Project 
 Gutenberg](https://www.gutenberg.org/), but that was only build 34. This is in the [FASTA 
 format](http://en.wikipedia.org/wiki/FASTA_format).
 
@@ -27,9 +27,9 @@ I'm excluding them from this repository since they're rather large.~~
 ## Twitter Image Bot 
 
 The first thing I've tried to do is to build an [Twitter bot](https://twitter.com/) that tweets images of portions 
-of the DNA sequence. It takes 28,842 acids at a time and builds an image that is 845x845. Each acid it finds, maps to 
+of the DNA sequence. It takes 28,419 acids at a time and builds an image that is 840x840. Each acid it finds, maps to 
 a color 5x5 square. This bot will tweet a section every hour. At that rate it will take about a year to finish all 
-252,663,704 acids (8,760 images).
+248,564,422 acids (8,760 images).
 
 This is the [image.py](image.py) script.
 
