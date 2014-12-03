@@ -25,3 +25,5 @@ of the DNA sequence. It takes 28,842 acids at a time and builds an image that is
 a color 5x5 square. This bot will tweet a section every hour. At that rate it will take about a year to finish all 
 252,663,704 acids (8,760 images).
 
+This is the [image.py](image.py) script.
+
