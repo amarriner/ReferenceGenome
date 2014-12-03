@@ -1,22 +1,28 @@
 # Nucleotide Sequences
 
-*Script(s)/bot that does something with the [Human Genome Project's](http://www.genome.gov/) nucleotide sequences*
+*Script(s)/bots that do something with the [Human Genome Project's](http://www.genome.gov/) nucleotide sequences*
 
-I know very little about [DNA](http://en.wikipedia.org/wiki/DNA) and the [Human Genome 
+I've downloaded Genome Reference Consortium Human Build 38 patch release 1 from the [National Center for 
+Biotechnical Information](http://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.27/) (thanks 
+[@vogon](https://twitter.com/vogon!) for this. I was using the one from [Project 
+Gutenberg](https://www.gutenberg.org/), but that was only build 34. This is in the [FASTA 
+format](http://en.wikipedia.org/wiki/FASTA_format).
+
+~~I know very little about [DNA](http://en.wikipedia.org/wiki/DNA) and the [Human Genome 
 Project's](http://www.genome.gov/), but since [Project Gutenberg](https://www.gutenberg.org/) has [nucleotide 
 sequences from the Genome Project](http://www.gutenberg.org/ebooks/subject/15882) I thought I'd try to come up with 
-interesting ways to look at them.
+interesting ways to look at them.~~
 
-As best I can tell, they're in the [FASTA format](http://en.wikipedia.org/wiki/FASTA_format). I've taken a file 
+~~As best I can tell, they're in the [FASTA format](http://en.wikipedia.org/wiki/FASTA_format). I've taken a file 
 (started with [Chromosome 1](http://www.gutenberg.org/ebooks/11775)) and stripped the top Project Gutenberg text out 
 of it as well as the first identification line so that I'm left with only the nucleic acids. There are large 
 sections that have only the letter N which seems (according to the FASTA format) be unknown nucleic acids. The other 
 characters map to [Adenine](http://en.wikipedia.org/wiki/Adenine), 
 [Cytosine](http://en.wikipedia.org/wiki/Cytosine), (Guanine)[http://en.wikipedia.org/wiki/Guanine], and 
-(Thymine)[http://en.wikipedia.org/wiki/Thymine].
+(Thymine)[http://en.wikipedia.org/wiki/Thymine].~~
 
-All of the sequences can be downloaded from [Project Gutenberg](http://www.gutenberg.org/ebooks/subject/15882) so 
-I'm excluding them from this repository since they're rather large.
+~~All of the sequences can be downloaded from [Project Gutenberg](http://www.gutenberg.org/ebooks/subject/15882) so 
+I'm excluding them from this repository since they're rather large.~~
 
 ## Twitter Image Bot 
 
