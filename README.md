@@ -3,8 +3,8 @@
 *Script(s)/bots that do something with the [Human Genome Project's](http://www.genome.gov/) nucleotide sequences*
 
 I've downloaded Genome Reference Consortium Human Build 38 patch release 1 from the [National Center for 
-Biotechnical Information](http://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.27/) (thanks 
-[@vogon](https://twitter.com/vogon!) for this. I was using the one from [Project 
+Biotechnical Information](http://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.27/) (thanks to
+[@vogon](https://twitter.com/vogon) for this!). I was using the one from [Project 
 Gutenberg](https://www.gutenberg.org/), but that was only build 34. This is in the [FASTA 
 format](http://en.wikipedia.org/wiki/FASTA_format).
 
