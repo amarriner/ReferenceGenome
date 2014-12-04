@@ -2,8 +2,12 @@
 
 import codecs
 import gd
+import keys
 import os
 import sys
+import twitter
+
+pwd = "/home/amarriner/python/genome/"
 
 # Total number of acids
 TOTAL = 248956422
@@ -19,8 +23,8 @@ size = 5
 # The iteration we're on. If we haven't iterated before it's zero,
 # otherwise get it from a file
 iter = 0
-if os.path.exists("iter"):
-   f = codecs.open("iter", "r", "utf-8")
+if os.path.exists(pwd + "iter"):
+   f = codecs.open(pwd + "iter", "r", "utf-8")
    iter = int(f.read().replace("\n",""))
    f.close()
 
@@ -45,8 +49,8 @@ def make_image():
    if last > TOTAL:
       last = TOTAL - 1
 
-   f = codecs.open("chromosome01.txt", "r", "utf-8")
-   chromosome = f.read()[(iter * max):TOTAL]
+   f = codecs.open(pwd + "chromosome01.txt", "r", "utf-8")
+   chromosome = f.read()[(iter * max):last]
    f.close()
 
    # Create new image
@@ -88,18 +92,12 @@ def make_image():
       i += 1
       
    # Write the resulting image
-   img.writePng("chrom.png")
-
-   # Increment and write the iteration number
-   f = codecs.open("iter", "w", "utf-8")
-   f.write(str(iter + 1))
-   f.close()
-
+   img.writePng(pwd + "chrom.png")
 
 def main():
    make_image()   
 
-   title = "Chromosome 01\n"
+   title = "Chromosome 01 - Iteration " + str(iter + 1) + " - "
    acids = "Acids " + "{:,}".format(iter * max) + " through " + "{:,}".format(iter * max + max - 1) + "\n"
 
    tweet = ""
@@ -108,11 +106,23 @@ def main():
    found = False
    for n in nucleic_acids.keys():
       if nucleic_acids[n]["count"]:
-         tweet += nucleic_acids[n]["name"] + ": " + "{:,}".format(nucleic_acids[n]["count"]) + "\n"
+         tweet += n + ": " + "{:,}".format(nucleic_acids[n]["count"]) + "\n"
          found = True
 
    if found:
       print tweet, len(tweet)
+
+      # Connect to Twitter
+      api = twitter.Api(keys.consumer_key, keys.consumer_secret, keys.access_token, keys.access_token_secret)
+
+      # Post tweet text and image
+      status = api.PostMedia(tweet, pwd + 'chrom.png')
+
+      # Increment and write the iteration number
+      f = codecs.open(pwd + "iter", "w", "utf-8")
+      f.write(str(iter + 1))
+      f.close()
+
    else:
       print "Done!"
 
