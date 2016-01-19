@@ -50,7 +50,8 @@ def make_image():
       last = TOTAL - 1
 
    f = codecs.open(pwd + "chromosome01.txt", "r", "utf-8")
-   chromosome = f.read()[(iter * max):last]
+   f.seek(979)
+   chromosome = f.read(max)
    f.close()
 
    # Create new image
